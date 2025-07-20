@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+<div style="text-align: center; margin-top: 20px;">
+  <img src="registration.png" 
+       alt="Registration"
+       width="50" height="50"
+       style="border-radius: 110%; object-fit: cover;">
+</div> 
+    <h2 style="background-color: blueviolet;">Registration from</h2>
+
+    <form>
+
+        <div>
+
+            <label for="fullname">FullName:</label>
+         <input type="text" name="fullname"id="fullname" required>
+         
+
+        </div><br>
+
+        <div>
+
+           <!-- label ta kiser jornno tai for -->
+            <label for="email">Email:</label>
+         <input type="email" name="email"id="email">
+         <!-- input tag ar jorno name dite pari -->
+          <!-- id dite pari sohoj a inputfield cenar jorno -->
+
+        </div><br>
+
+
+         <div>
+
+             <label for="password">PassWord:</label> <!-- label ta kiser jornno tai for -->
+             <!-- input tag ar jorno name dite pari -->
+             <!-- id dite pari sohoj a inputfield cenar jorno -->
+         <input type="password" name="password"id="password">
+
+        </div><br>
+
+         <div>
+
+            <!-- label ta kiser jornno tai for -->
+            <label for="dob">Date Of Birth:</label>
+            <!-- input tag ar jorno name dite pari -->
+         <input type="date" name="dob"id="dob">
+          <!-- id dite pari sohoj a inputfield cenar jorno -->
+
+        </div><br>
+
+         <div>
+
+            <!-- label ta kiser jornno tai for -->
+            <label for="image">Choose your Photo:</label>
+            <!-- input tag ar jorno name dite pari -->
+         <input type="file" name="image"id="image">
+          <!-- id dite pari sohoj a inputfield cenar jorno -->
+
+        </div><br>
+
+         <div>
+
+            <!-- label ta kiser jornno tai for -->
+            <label for="gender">Gender:</label>
+            <!-- input tag ar jorno name dite pari -->
+            <!-- id dite pari sohoj a inputfield cenar jorno -->
+         <input type="radio" name="gender"id="gender" value="male">Male
+          <!-- input tag ar jorno name dite pari -->
+          <input type="radio" name="gender"id="gender" value="female">Female
+
+        </div><br>
+
+        <!-- label ta kiser jornno tai for -->
+          <label for="religion">Religion:</label>
+          <!-- input tag ar jorno name dite pari -->
+         <input checked type="checkbox" name="islam"id="islam" value="islam">Islam
+          <!-- id dite pari sohoj a inputfield cenar jorno -->
+          <!-- input tag ar jorno name dite pari -->
+          <input type="checkbox" name="hindu"id="hindu" value="hindu">Hindu
+
+        </div><br>
+
+        <div>
+            
+            
+            <label style="color: rgb(205, 13, 222);" for="department">Department</label>
+            <select name="department">//dropdown ar jorno select tag
+
+                <option value="cse">CSE</option>
+                <option value="eee">EEE</option>
+                <option value="datascience" selected>DATA SCIENCE</option>
+                <option value="math">MATH</option>
+
+
+
+            </select>
+
+
+
+
+
+
+
+           </div>
+
+
+           <div>
+            <label for="message"> Message </label><br>
+            <textarea cols="30" rows="30">WTH</textarea>
+           </div>
+
+
+           <div> 
+            <input type="submit" value="Register" disabled>
+             <input type="reset" value="Clear">
+        
+        
+        </div>
+
+
+
+
+    </form>
+</body>
+</html>
