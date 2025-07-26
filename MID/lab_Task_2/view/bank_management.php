@@ -34,7 +34,7 @@ h2 {
   
   text-align: left;
   max-width: 480px;
-  margin: 0 auto 10px auto;
+  margin-top: 20px;
 }
 
 .registration-form {
@@ -65,11 +65,6 @@ h2 {
   font-size: 14px;
 }
 
-.radio-group {
-  display: flex;
-  gap: 10px;
-}
-
 .checkbox-group {
   display: flex;
   justify-content: flex-start;
@@ -96,11 +91,11 @@ button {
 }
 
 button[type="reset"] {
-  background-color: #d9534f;
+  background-color: #007bff;
 }
 
 .overflow-box {
-  margin: 20px auto;
+  margin-top: 20px;
   width: 300px;
   height: 60px;
   border: 1px solid #999;
@@ -112,7 +107,9 @@ button[type="reset"] {
 }
 
 
- 
+ .button-group{
+  text-align: center;
+ }
 
     </style>
 
@@ -127,110 +124,111 @@ button[type="reset"] {
 
         <div class="form-title">
 
-        <h3 align="left">Customer Registration Form</h3>
+          <h3>Customer Registration Form</h3>
 
-        <form class="registration-form">
-            <div class="form-group">
-            <label>Full Name:</label>
-            <input type="text" id="fullname">
-             </div>
+          <form class="registration-form">
+              <div class="form-group">
+              <label>Full Name:</label>
+              <input type="text" id="fullname">
+              </div>
 
-             <div class="form-group">
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob">
-      </div>
-
-      <div class="form-group">
-        <label>Gender:</label>
-        <div class="radio-group">
-          <label><input type="radio" name="gender"> Male</label>
-          <label><input type="radio" name="gender"> Female</label>
-          <label><input type="radio" name="gender"> Other</label>
+              <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob">
         </div>
-      </div>
+
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+            <label><input type="radio" name="gender"> Other</label>
+          </div>
+        </div>
 
 
-      <div class="form-group">
-        <label for="marital">Marital Status:</label>
-        <select id="marital">
-          <option>Single</option>
-          <option>Married</option>
-          <option>Other</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label for="marital">Marital Status:</label>
+          <select id="marital">
+            <option>Single</option>
+            <option>Married</option>
+            <option>Other</option>
+          </select>
+        </div>
 
-      <div class="form-group">
-        <label for="account">Account Type:</label>
-        <select id="account">
-          <option>Savings</option>
-          <option>Current</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label for="account">Account Type:</label>
+          <select id="account">
+            <option>Savings</option>
+            <option>Current</option>
+          </select>
+        </div>
 
-       <div class="form-group">
-        <label for="deposit">Initial Deposit Amount:</label>
-        <input type="number" id="deposit">
-      </div>
+        <div class="form-group">
+          <label for="deposit">Initial Deposit Amount:</label>
+          <input type="number" id="deposit">
+        </div>
 
-      <div class="form-group">
-        <label for="mobile">Mobile Number:</label>
-        <input type="tel" id="mobile">
-      </div>
-
-
-      <div class="form-group">
-        <label for="email">Email Address:</label>
-        <input type="email" id="email">
-      </div>
-
-      <div class="form-group">
-        <label for="address">Address:</label>
-        <textarea id="address" rows="2"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="occupation">Occupation:</label>
-        <input type="text" id="occupation">
-      </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number:</label>
+          <input type="tel" id="mobile">
+        </div>
 
 
-       <div class="form-group">
-        <label for="nid">National ID (NID):</label>
-        <input type="text" id="nid">
-      </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email">
+        </div>
 
-      <div class="form-group">
-        <label for="password">Set Password:</label>
-        <input type="password" id="password">
-      </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea id="address" rows="2"></textarea>
+        </div>
 
-      <div class="form-group">
-        <label for="idproof">Upload ID Proof:</label>
-        <input type="file" id="idproof">
-      </div>
-
-      <div class="form-group checkbox-group">
-        <label><input type="checkbox"> I agree to the terms and conditions</label>
-      </div>
-
-      <div class="button-group">
-        <button type="submit">Register</button>
-        <button type="reset">Clear</button>
-      </div>
+        <div class="form-group">
+          <label for="occupation">Occupation:</label>
+          <input type="text" id="occupation">
+        </div>
 
 
+        <div class="form-group">
+          <label for="nid">National ID (NID):</label>
+          <input type="text" id="nid">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Set Password:</label>
+          <input type="password" id="password">
+        </div>
+
+        <div class="form-group">
+          <label for="idproof">Upload ID Proof:</label>
+          <input type="file" id="idproof">
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label><input type="checkbox"> I agree to the terms and conditions</label>
+        </div>
+
+        <div class="button-group">
+          <button type="submit">Register</button>
+          <button type="reset">Clear</button>
+        </div>
 
 
 
 
 
-        </form>
-    </div>
 
-        <div class="overflow-box">
-      This is a demo text to show how overflow works in a small container with a scroll bar.
-      You can add more text here to make the scrollbar visible and test vertical and horizontal scrolling.
-    </div>
+
+          </form>
+
+          <p class="overflow-box">This is a demo text to show how overflow works in a small container with a scroll bar. You can add more text here to make the scrollbar visible and test vertical and horizontal scrolling.</p>
+
+        </div>
+       
+
+        
 
 
 
