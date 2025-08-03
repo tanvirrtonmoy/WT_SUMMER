@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Profile and Status Checker</title>
+</head>
+<body>
+
+  <h1>Student Profile Checker</h1>
+  <p>Open the browser console to view the details. (Right-click → Inspect → Console)</p>
+
+  <script>
+    console.log("STUDENT INFORMATION");
+    var studentName = "Tanvir";
+    var studentAge = 19;
+    var isStudent = true;
+    var studentClass = "12th Grade";
+    var marks = [85, 72, 90, 68, 74];  
+
+    console.log("Name:", studentName);
+    console.log("Age:", studentAge);
+    console.log("Is Student?", isStudent);
+    console.log("Class:", studentClass);
+    console.log("Marks:", marks);
+
+    console.log("\nCALCULATIONS");
+    var total = 0;
+    for (var i = 0; i < marks.length; i++) {
+      total += marks[i];
+    }
+    var average = total / marks.length;
+    console.log("Total Marks:", total);
+    console.log("Average Marks:", average);
+
+    console.log("\nSTATUS CHECK");
+    if (studentAge >= 18) {
+      console.log(studentName + " is an adult.");
+    } else {
+      console.log(studentName + " is a minor.");
+    }
+
+    if (average >= 60) {
+      console.log("Status: Passed");
+    } else {
+      console.log("Status: Failed");
+    }
+
+    console.log("\nSUBJECT MARKS");
+    for (var i = 0; i < marks.length; i++) {
+      console.log("Subject " + (i + 1) + ": " + marks[i]);
+    }
+
+    function showSummary() {
+      console.log("\nSTUDENT SUMMARY");
+      console.log("Name:", studentName);
+      console.log("Age:", studentAge);
+      console.log("Class:", studentClass);
+      console.log("Average Marks:", average);
+      console.log("Status:", average >= 60 ? "Passed" : "Failed");
+    }
+
+    showSummary();
+
+    
+     function showMarks(index) {
+      if (index < marks.length) {
+        alert("Subject " + (index + 1) + " Marks: " + marks[index]);
+        setTimeout(function() {
+          showMarks(index + 1);
+        }, 0); 
+      } else {
+        
+        var summary = "Name: " + studentName +
+                      "\nAge: " + studentAge +
+                      "\nClass: " + studentClass +
+                      "\nAverage Marks: " + average.toFixed(2) +
+                      "\nStatus: " + (average >= 60 ? "Passed" : "Failed");
+        alert(summary);
+      }
+    }
+
+    
+    function startShowingMarks() {
+      showMarks(0);
+    }
+  </script>
+
+  <br><br>
+  <button onclick="startShowingMarks()">Show Result</button>
+
+</body>
+</html>
