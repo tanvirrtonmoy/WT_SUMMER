@@ -51,41 +51,45 @@ function validateDonationForm() {
     }
 
 
-    var donationSelected = false;
-    for (var i = 0; i < amountRadios.length; i++) {
-        if (amountRadios[i].checked) {
-            donationSelected = true;
-            break;
-        }
+   var selectedValue = "";
+for (var i = 0; i < amountRadios.length; i++) {
+    if (amountRadios[i].checked) {
+        selectedValue = amountRadios[i].value;
+        break;
     }
-    if (!donationSelected) {
-        alert("Please select a donation amount.");
+}
+
+if (!selectedValue) {
+    alert("Please select a donation amount.");
+    return false;
+}
+
+if (selectedValue === "Other") {
+    if (otherAmount === "" || isNaN(otherAmount) || parseFloat(otherAmount) <= 0) {
+        alert("Please enter a valid donation amount in 'Other Amount'.");
         return false;
     }
-
-   
-    if (selectedValue === "Other") {
-        if (otherAmount === "" || isNaN(otherAmount) || parseFloat(otherAmount) <= 0) {
-            alert("Please enter a valid donation amount in 'Other Amount'.");
-            return false;
-        }
-    }
+    selectedValue = otherAmount; // use the entered amount
+}
 
     
 
     alert("Thank you for your donation, " + firstName + "!");
 
 
-    var infoMessage =
+    var infoMessage = 
     "Submitted Information:\n" +
     "-----------------------------\n" +
     "Name: " + firstName + " " + lastName + "\n" +
     "Address: " + address + ", " + city + ", " + state + "\n" +
     "Phone: " + phone + "\n" +
     "Email: " + email + "\n" +
-    "Donation Amount: " + donationAmount;
+    "Donation Amount: " +  selectedValue + "\n" +
+    "other Amount: " +  otherAmount;
 
      alert(infoMessage);
+
+    //   alert("HeeeeHeeeee");
 
     return true; 
 }
